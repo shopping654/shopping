@@ -1,0 +1,120 @@
+class Cat{
+int size;
+
+String name;
+void bark(){
+if(size>60){
+System.out.println("Woof!Woof!");
+}else if(size>14){
+System.out.println("Ruff!Ruff!");
+}else{
+System.out.println("Yip!Yip!");
+}
+
+}
+}
+class DogTestDrive {
+public static void main(String[] args){
+Cat one = new Cat();
+one.size = 70;
+Cat two = new Cat();
+two.size = 8;
+Cat three =  new Cat();
+three.size = 35;
+
+one.bark();
+two.bark();
+three.bark();
+}
+}
+
+
+
+4.//编写类
+class Movie{
+//实例对象
+String title;
+String genre;
+int rating;
+//方法
+void playIt(){
+    System.out.println("Playing the movie"); 
+}
+}
+public class MovieTestDrive {
+//编写测试用的类
+   public static void main(String[] args){
+  //建立movie对象
+  Movie one = new Movie();
+  //圆点运算符引用
+  one.title = "Gone with the Stock";
+  one.genre = "Tragic";
+  one.rating = -2;
+  
+  //建立movie对象
+  Movie two = new Movie();
+  two.title = "Lost in Cubicle Space";
+  two.genre = "Comedy";
+  two.rating = 5;
+ //调用方法
+  two.playIt();
+  
+   }
+
+
+}
+
+
+
+5.
+
+ public class SimpleDotCom {
+int[] locationCells;
+int numOfHits = 0;
+ 
+public void setLocationCells(int[] locs){
+locationCells = locs;
+}
+
+
+public String checkYourself(String StringGuess) {
+int guess = Integer.parseInt(StringGuess);
+String result = "miss";
+for (int cell:locationCells){
+if (guess == cell){
+result = "hit";
+numOfHits++;
+break;
+}
+}
+if(numOfHits == locationCells.length){
+result = "kill";
+}
+System.out.println(result);
+return result;
+}
+
+
+}
+
+
+
+
+
+public class SimpleDotComTestDrive {
+  public static void main(String[] args){
+ //初始化一个SimpleDotCom对象
+ SimpleDotCom dot = new SimpleDotCom();
+ //创建带有dot com位置的数组
+ int[] locations = {2,3,4};
+ //调用dot com 的setter
+ dot.setLocationCells(locations);
+ //假的猜测
+ String userGuess = "2";
+ //调用被测方法并传入假的数据
+ String result = dot.checkYourself(userGuess);  
+  }
+}
+
+
+
